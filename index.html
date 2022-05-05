@@ -40,9 +40,9 @@
                     <label for="phoneNumber">PHONE Number</label>
                     <input type="tel" name="phoneNumber" id="phoneNumber">
                     <label for="user_password">PASSWORD</label>
-                    <input type="password" name="password" id="user_password">
+                    <input type="password" name="password" id="user_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}">
                     <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" name="password" id="confirm_password">
+                    <input type="password" name="password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}">
                 </div>
                 <div class="container-submit">
                     <button class="container-button" type="submit">Create Account</button>
