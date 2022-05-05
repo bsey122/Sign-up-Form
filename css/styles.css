@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: Norse-Bold;
+    src: url(../fonts/Norse-Bold.otf);
+}
+:root {
+    --primary-dark: #2E3D59;
+    --primary-medium: #586A8C;
+    --primary-light: #ADC5D9;
+    --secondary-dark: #761DF2;
+    --secondary-light: #C866F2;
+    --shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    --ff: 'Roboto', 'san-serif';
+    --fs: 16px;
+    font-family: var(--ff);
+    font-size: var(--fs);
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-medium);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    background-color: var(--primary-light);
+    box-shadow: var(--shadow);
+    border-radius: 0.3rem;
+    overflow: hidden; /* Hides image corners so that rounded border is shown */
+}
+.container-imageCard {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+.container-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.container-image {
+    width: 100%;
+}
+.container-content p {
+    font-size: 1.1rem;
+}
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.container-form > label {
+    font-size: 0.8rem;
+}
+.container-form > p,
+.container-form > label {
+    padding: 0 3rem;
+}
+.container-form > input {
+    margin: 0 3rem;
+    border: 1px solid var(--primary-medium);
+    border-radius: 0.3rem;
+}
+.container-form > input:focus {
+    outline: 1px solid var(--primary-dark);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.19),2px 2px 5px rgba(0,0,0,0.23);
+}
+.container-form > input:invalid {
+    outline: none;
+    border: 1px solid red;
+}
+.container-text,
+.container-submit {
+    padding: 1rem 3rem;
+}
+.container-button {
+    border: none;
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+}
+.container-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute; /* Positioned relative to .container-imageCard */
+    top: 10rem;
+    color: white;
+    background-color: black;
+    opacity: 0.6;
+    padding: 0.5rem 0;
+}
+.container-logo > img {
+    width: 5rem;
+}
+.container-logo > p {
+    font-family: Norse-Bold, sans-serif;
+    font-size: 2rem;
+}
+.container-credit {
+    position: absolute; /* Positioned relative to .container-imageCard */
+    font-size: 0.7rem;
+    top: 95%;
+    left: 25%;
+}
+.container-credit > p, 
+.container-credit p > a {
+    color: white;
+    opacity: 0.8;
+}
